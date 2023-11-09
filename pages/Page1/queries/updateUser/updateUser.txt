@@ -1,0 +1,9 @@
+UPDATE public."users" SET
+    "gender" = {{sel_gender.selectedOptionValue}},
+    "dob" = {{dat_dob.formattedDate}},
+    "phone" = {{pho_phone.text}},
+    "email" = {{inp_email.text}},
+    "country" = {{sel_country.selectedOptionValue}},
+    "name" = {{inp_name.text}},
+    "updated_at" = {{new Date().toISOString()}}
+  WHERE id = {{tbl_userInfo.selectedRow.id}}; -- Specify a valid condition here. Removing the condition may update every row in the table!
